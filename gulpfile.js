@@ -10,14 +10,15 @@ var paths = {
 	styleSrc: 'src/_scss/*.scss',
 	scriptSrc: 'src/_js/*.js',
 	styleDest: '_site/css',
-	scriptDes: '_site/js'
+	scriptDest: '_site/js'
 };
 
 gulp.task('styles', function () {
 	return gulp.src(paths.styleSrc)
 		.pipe(sourcemaps.init())
 		.pipe(sass({
-			outputStyle: 'compressed'
+			outputStyle: 'compressed',
+			errLogToConsole: true
 		}).on('error', sass.logError))
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(paths.styleDest))
@@ -34,3 +35,12 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('generate', shell.task('eleventy'));
+
+gulp.task('serve', shell.task('eleventy --serve'));
+
+gulp.task('watch', ['styles', 'scripts'], function() {
+	gulp.watch(paths.styleSrc, ['styles']);
+	gulp.watch(paths.scriptSrc, ['scripts']);
+});
+
+gulp.task('default', ['watch', 'serve']);
