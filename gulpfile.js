@@ -7,10 +7,10 @@ var uglify = require('gulp-uglify');
 var shell = require('gulp-shell');
 
 var paths = {
-	styleSrc: 'src/_scss/*.scss',
-	scriptSrc: 'src/_js/*.js',
-	styleDest: '_site/css',
-	scriptDest: '_site/js'
+	styleSrc: 'assets/scss/**/*.scss',
+	scriptSrc: 'assets/js/**/*.js',
+	styleDest: 'site/css',
+	scriptDest: 'site/js'
 };
 
 gulp.task('styles', function () {
