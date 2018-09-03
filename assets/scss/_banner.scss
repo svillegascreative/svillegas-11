@@ -1,0 +1,21 @@
+.banner {
+	display: flex;
+	padding: $base-space;
+}
+
+
+@media (min-width: $large-up) {
+	.banner {
+		width: $right-banner-width;
+		max-width: $right-banner-max-width;
+		position: fixed;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		flex-direction: column-reverse;
+	}
+
+	.nameplate {
+		text-align: center;
+	}
+}

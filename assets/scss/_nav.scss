@@ -1,0 +1,10 @@
+.main-nav {
+	flex: 1;
+	ul {
+		@include unstyled-list;
+		text-align: right;
+	}
+	a {
+		color: #000;
+	}
+}
