@@ -1,5 +1,6 @@
 ---
 title: Let’s Bring Your Web Project to Life
+layout: default
 ---
 
 I believe in the Web as a tool: for sharing knowledge, for helping others, and for improving our own lives. Building things on the Web is my way of achieving these things for myself and for the users I aim to reach. Oh, and it can totally be fun, too.
