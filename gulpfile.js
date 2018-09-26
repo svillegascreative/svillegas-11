@@ -5,10 +5,13 @@ var babel = require('gulp-babel');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var shell = require('gulp-shell');
+var browserSync = require('browser-sync');
 
 var paths = {
+	siteSrc: 'src/',
 	styleSrc: 'assets/scss/**/*.scss',
 	scriptSrc: 'assets/js/**/*.js',
+	siteDest: 'site',
 	styleDest: 'site/css',
 	scriptDest: 'site/js'
 };
@@ -22,6 +25,9 @@ gulp.task('styles', function () {
 		}).on('error', sass.logError))
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(paths.styleDest))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
 });
 
 gulp.task('scripts', function () {
@@ -32,15 +38,26 @@ gulp.task('scripts', function () {
 	.pipe(uglify())
 	.pipe(sourcemaps.write('.'))
 	.pipe(gulp.dest(paths.scriptDest))
+	.pipe(browserSync.reload({
+		stream: true
+	}));
 });
 
 gulp.task('generate', shell.task('eleventy'));
 
-gulp.task('serve', shell.task('eleventy --serve'));
-
-gulp.task('watch', ['styles', 'scripts'], function() {
-	gulp.watch(paths.styleSrc, ['styles']);
-	gulp.watch(paths.scriptSrc, ['scripts']);
+gulp.task('browserSync', function () {
+  browserSync.init({
+    server: {
+      baseDir: 'site/'
+    }
+  });
 });
 
-gulp.task('default', ['watch', 'serve']);
+gulp.task('watch', ['styles', 'scripts', 'generate'], function() {
+	gulp.watch(paths.styleSrc, ['styles']);
+	gulp.watch(paths.scriptSrc, ['scripts']);
+	gulp.watch(paths.siteSrc, ['generate']);
+	browserSync.reload();
+});
+
+gulp.task('default', ['watch', 'browserSync']);
