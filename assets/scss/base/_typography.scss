@@ -2,11 +2,13 @@ html {
 	font-family: $basefont-family;
 	font-size: $basefont-size;
 	line-height: $basefont-line-height;
+	-webkit-text-size-adjust: 100%;  // normalize.css v8.0.0
 }
 
 a {
 	color: $a-color;
 	text-decoration: none;
+	background-color: transparent; // normalize.css v8.0.0
 }
 
 h1,
@@ -14,4 +16,48 @@ h2,
 h3,
 h4 {
 	font-family: $headingfont-family;
+}
+
+h1 {
+	font-size: 2em; // normalize.css v8.0.0
+  margin: 0.67em 0; // normalize.css v8.0.0
+}
+
+abbr[title] {
+  border-bottom: none; // normalize.css v8.0.0
+  text-decoration: underline; // normalize.css v8.0.0
+  text-decoration: underline dotted; // normalize.css v8.0.0
+}
+
+b,
+strong {
+  font-weight: bolder; // normalize.css v8.0.0
+}
+
+small {
+  font-size: 80%; // normalize.css v8.0.0
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: monospace, monospace; // normalize.css v8.0.0
+  font-size: 1em; // normalize.css v8.0.0
+}
+
+sub,
+sup {
+  font-size: 75%; // normalize.css v8.0.0
+  line-height: 0; // normalize.css v8.0.0
+  position: relative; // normalize.css v8.0.0
+  vertical-align: baseline; // normalize.css v8.0.0
+}
+
+sub {
+  bottom: -0.25em; // normalize.css v8.0.0
+}
+
+sup {
+  top: -0.5em; // normalize.css v8.0.0
 }
