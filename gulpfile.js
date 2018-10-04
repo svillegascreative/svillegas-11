@@ -57,7 +57,6 @@ gulp.task('watch', ['styles', 'scripts', 'generate'], function() {
 	gulp.watch(paths.styleSrc, ['styles']);
 	gulp.watch(paths.scriptSrc, ['scripts']);
 	gulp.watch(paths.siteSrc, ['generate']);
-	browserSync.reload();
 });
 
 gulp.task('default', ['watch', 'browserSync']);
