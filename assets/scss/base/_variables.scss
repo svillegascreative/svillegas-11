@@ -1,0 +1,31 @@
+///// BREAKPOINTS
+$small: 30em;
+$small-up: $small + 1em;
+$medium: 45em;
+$medium-up: $medium + 1em;
+$large: 60em;
+$large-up: $large + 1em;
+
+
+///// PALETTE
+
+
+///// TYPOGRAPHY
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Quando');
+$basefont-family: 'Alegreya Sans', sans-serif;
+$basefont-size: 150%;
+$basefont-line-height: 1.3;
+
+$headingfont-family: 'Quando', serif;
+
+$a-color: hsl(190, 70%, 45%);
+
+
+///// LAYOUT
+$body-bg: hsl(190, 5%, 87%);
+
+$base-space: 1rem;
+
+$right-banner-width: 30%;
+$right-banner-max-width: 30em;
+

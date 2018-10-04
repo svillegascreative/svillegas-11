@@ -1,10 +1,13 @@
-@import 'variables';
-@import 'mixins';
+@import 'vendor/normalize';
+@import 'vendor/sanitize';
 
-@import 'layout';
-@import 'typography';
-@import 'forms';
+@import 'base/variables';
+@import 'base/mixins';
 
-@import 'nav';
-@import 'banner';
-@import 'footer';
+@import 'base/layout';
+@import 'base/typography';
+@import 'base/forms';
+
+@import 'component/nav';
+@import 'component/banner';
+@import 'component/footer';
