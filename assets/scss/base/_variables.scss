@@ -8,17 +8,23 @@ $large-up: $large + 1em;
 
 
 ///// PALETTE
+$code-bgcolor: #777;
+$code-color: #ccc;
+
+$color-accent: indigo;
 
 
 ///// TYPOGRAPHY
-@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Quando');
-$basefont-family: 'Alegreya Sans', sans-serif;
-$basefont-size: 150%;
-$basefont-line-height: 1.3;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Quando');
+$basefont-family: 'Open Sans', sans-serif;
+$basefont-size: 120%;
+$basefont-line-height: 1.5;
 
 $headingfont-family: 'Quando', serif;
 
 $a-color: hsl(190, 70%, 45%);
+
+$code-padding: 5px;
 
 
 ///// LAYOUT
@@ -29,3 +35,7 @@ $base-space: 1rem;
 $right-banner-width: 30%;
 $right-banner-max-width: 30em;
 
+
+// SPACING
+$base-space: 1em;
+$small-space: $base-space / 2;
