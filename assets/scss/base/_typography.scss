@@ -5,11 +5,21 @@ html {
 	-webkit-text-size-adjust: 100%;  // normalize.css v8.0.0
 }
 
+p {
+	min-width: 30ch;
+	max-width: 75ch;
+}
+
+
+//// LINKS
 a {
 	color: $a-color;
 	text-decoration: none;
 	background-color: transparent; // normalize.css v8.0.0
 }
+
+
+//// HEADINGS
 
 h1,
 h2,
@@ -23,11 +33,8 @@ h1 {
   margin: 0.67em 0; // normalize.css v8.0.0
 }
 
-abbr[title] {
-  border-bottom: none; // normalize.css v8.0.0
-  text-decoration: underline; // normalize.css v8.0.0
-  text-decoration: underline dotted; // normalize.css v8.0.0
-}
+
+//// VARIANTS
 
 b,
 strong {
@@ -42,8 +49,20 @@ code,
 kbd,
 samp,
 pre {
-  font-family: monospace, monospace; // normalize.css v8.0.0
-  font-size: 1em; // normalize.css v8.0.0
+	font-family: // sanitize.css v7.0.3
+	/* macOS 10.10+ */ Menlo,
+	/* Windows 6+ */ Consolas,
+	/* Android 4+ */ Roboto Mono,
+	/* Ubuntu 10.10+ */ Ubuntu Monospace,
+	/* KDE Plasma 4+ */ Oxygen Mono,
+	/* Linux/OpenOffice fallback */ Liberation Mono,
+	/* fallback */ monospace;
+	
+	font-size: 1em; // normalize.css v8.0.0
+	color: $code-color;
+	background-color: $code-bgcolor;
+	padding: $code-padding;
+	border-radius: 3px;
 }
 
 sub,
@@ -60,4 +79,34 @@ sub {
 
 sup {
   top: -0.5em; // normalize.css v8.0.0
+}
+
+abbr[title] {
+  border-bottom: none; // normalize.css v8.0.0
+  text-decoration: underline; // normalize.css v8.0.0
+  text-decoration: underline dotted; // normalize.css v8.0.0
+}
+
+
+//// LISTS
+
+dt {
+	font-weight: bold;
+}
+
+ol ol {
+	list-style: lower-alpha;
+}
+
+
+//// QUOTES
+blockquote {
+	color: $color-accent;
+	padding: $small-space;
+	font-style: italic;
+	text-align: center;
+
+	cite {
+		text-align: right;
+	}
 }
