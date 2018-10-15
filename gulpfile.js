@@ -43,20 +43,24 @@ gulp.task('scripts', function () {
 	}));
 });
 
-gulp.task('generate', shell.task('eleventy'));
+gulp.task('generate', shell.task('eleventy --watch'));
 
 gulp.task('browserSync', function () {
   browserSync.init({
     server: {
-      baseDir: 'site/'
-    }
-  });
+      baseDir: paths.siteDest
+		},
+		watchEvents: ['change', 'add'],
+		watch: true
+	});
+	
 });
 
-gulp.task('watch', ['styles', 'scripts', 'generate'], function() {
+gulp.task('watch', function() {
 	gulp.watch(paths.styleSrc, ['styles']);
 	gulp.watch(paths.scriptSrc, ['scripts']);
-	gulp.watch(paths.siteSrc, ['generate']);
+	//gulp.watch(paths.siteDest).on("change", browserSync.reload);
+	//gulp.watch(paths.siteSrc, ['generate']);
 });
 
-gulp.task('default', ['watch', 'browserSync']);
+gulp.task('default', ['generate', 'watch', 'browserSync']);
