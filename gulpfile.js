@@ -1,13 +1,13 @@
-var gulp = require('gulp');
-var sourcemaps = require('gulp-sourcemaps');
-var sass = require('gulp-sass');
-var babel = require('gulp-babel');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var shell = require('gulp-shell');
-var browserSync = require('browser-sync');
+const gulp = require('gulp');
+const sourcemaps = require('gulp-sourcemaps');
+const sass = require('gulp-sass');
+const babel = require('gulp-babel');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const shell = require('gulp-shell');
+const browserSync = require('browser-sync');
 
-var paths = {
+const paths = {
 	siteSrc: 'src/',
 	styleSrc: 'assets/scss/**/*.scss',
 	scriptSrc: 'assets/js/**/*.js',
@@ -16,21 +16,21 @@ var paths = {
 	scriptDest: 'site/js'
 };
 
-gulp.task('styles', function () {
+gulp.task('styles', () => {
 	return gulp.src(paths.styleSrc)
-		.pipe(sourcemaps.init())
-		.pipe(sass({
-			outputStyle: 'compressed',
-			errLogToConsole: true
-		}).on('error', sass.logError))
-		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(paths.styleDest))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
+	.pipe(sourcemaps.init())
+	.pipe(sass({
+		outputStyle: 'compressed',
+		errLogToConsole: true
+	}).on('error', sass.logError))
+	.pipe(sourcemaps.write())
+	.pipe(gulp.dest(paths.styleDest))
+	.pipe(browserSync.reload({
+		stream: true
+	}))
 });
 
-gulp.task('scripts', function () {
+gulp.task('scripts', () => {
 	return gulp.src(paths.scriptSrc)
 	.pipe(sourcemaps.init())
 	.pipe(babel())
@@ -45,7 +45,7 @@ gulp.task('scripts', function () {
 
 gulp.task('generate', shell.task('eleventy --watch'));
 
-gulp.task('browserSync', function () {
+gulp.task('browserSync', () => {
   browserSync.init({
     server: {
       baseDir: paths.siteDest
@@ -56,7 +56,7 @@ gulp.task('browserSync', function () {
 	
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', () => {
 	gulp.watch(paths.styleSrc, ['styles']);
 	gulp.watch(paths.scriptSrc, ['scripts']);
 	//gulp.watch(paths.siteDest).on("change", browserSync.reload);
