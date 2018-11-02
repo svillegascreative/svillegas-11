@@ -1,0 +1,82 @@
+-
+  title: Compass Dinner
+  date: 11/2017
+  tech:
+    - HTML5
+    - SCSS (CSS3)
+    - Javascript
+  description:
+    'Informational site for an exclusive dinner & discussion event series in Toronto.'
+  url: https://compassdinner.com
+
+-
+  title: Barn Genius
+  date: 2015 - 2018
+  tech:
+    - Joomla!
+    - MySQL
+    - FontAwesome
+	  - Google Analytics
+	  - Google AdSense
+	  - Amazon Affiliates
+    - AddThis
+  description:
+    'A site for clever equestrians, with completely bespoke design, illustrations, and articles.'
+
+-
+  title: Blanket Boss
+  date: 2017
+  tech:
+    - Ruby on Rails
+    - PostgreSQL
+    - Bourbon, Neat
+    - AWS S3
+    - jQuery
+    - FontAwesome
+    - animate.css
+  description:
+    'Some horses have lots of clothes. Some people have many horses. This little app helps manage equine wardrobes.'
+  url: http://blanketboss.herokuapp.com
+  repo: https://github.com/svillegascreative/blanketboss
+
+-
+  title: Plate Again
+  date: 03/2017
+  tech:
+    - Ruby on Rails
+    - PostgreSQL
+    - Foundation 6
+    - jQuery
+    - animate.css
+    - FontAwesome
+    - Google Fonts
+    - AWS S3
+    - Google Maps
+    - AddThis
+  description:
+    'A concept app, as a final group project during a Web Development Immersive course at Bitmaker (GA Toronto), addressing commercial food waste in the city of Toronto.'
+  url: http://plateagain.herokuapp.com
+  repo: https://github.com/svillegascreative/PlateAgain
+
+-
+  title: Seat Yourself
+  date: 03/2017
+  tech:
+    - Ruby on Rails
+    - SQLite3
+    - SCSS
+  description:
+    'A group project during a Web Development Immersive course at Bitmaker (GA Toronto), where we were tasked with recreating the functionality of the popular restaurant reservation site Open Table.'
+  repo: https://github.com/svillegascreative/bm_seatyourself
+
+-
+  title: Happy Hour
+  date: 02/2017
+  tech:
+    - Javascript
+    - jQuery
+    - FontAwesome
+  description:
+    'A fun and simple alcohol-themed game of Tic Tac Toe, made with JavaScript & jQuery.'
+  url: https://codepen.io/svillegas/full/KaYKWE
+  repo: https://github.com/svillegascreative/tic-tac-toe
