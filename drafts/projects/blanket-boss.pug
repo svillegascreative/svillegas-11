@@ -1,5 +1,50 @@
 ---
 title: Blanket Boss
+tech:
+  - Ruby on Rails
+	- 
 ---
 
-h1 Blanket Boss
+Blanket Boss was a side project I initiated during my time at <a href="http://www.bitmaker.co">Bitmaker (GA Toronto)</a>—and added to after completion of the course—allowing equestrians to manage a collection of horse blankets.
+
+<img class="aligncenter size-large wp-image-221" src="http://localhost/svwp/wp-content/uploads/blanket-boss-views-1024x516.png" alt="Blanket Boss viewsScreenshots of Blanket Boss on various devices." width="640" height="323" />
+<h2>The Story</h2>
+After our <a href="https://github.com/svillegascreative/photogur">first complete build of a Rails app</a> (an <a href="http://imgur.com">Imgur</a> clone), I decided to repeat the entire process myself for extra practice. While considering what kinds of "thing" I could use as the object of basic CRUD operations (create, read, update, &amp; delete), I thought of my friend Meagan.
+
+Meagan operates a riding stable, home of many of her own and clients' horses. All of these 35+ horses will wear one type of blanket or another at some point in the year, and the rest of the time all of those blankets need to be cleaned, washed, repaired, and stored—all things which are part of the service offered at the stables. One spring, the staff (myself included) were tasked with creating an inventory of all these items as they were stored, which became a tedious chore involving paper notes and online spreadsheets.
+
+[caption id="attachment_223" align="aligncenter" width="640"]<img class="size-large wp-image-223" src="http://localhost/svwp/wp-content/uploads/blanket-management-1024x724.png" alt="pile of horse blankets next to screenshot of Blanket Boss" width="640" height="453" /> From disordered collection of horse blankets, to perfectly organized inventory, with the help of Blanket Boss.[/caption]
+
+Apps are supposed to solve problems, right? (At least they should.) I knew this was a problem a very simple blanket management app could help her solve. And then my imagination ran away with me...
+<h2>The Process</h2>
+The initial process was a very straightforward build of a Rails app, with a single model: blankets. This went smoothly as I followed our assignment guide, and I felt like a rock star.
+
+[caption id="attachment_224" align="alignleft" width="222"]<img class="wp-image-224 size-medium" src="http://localhost/svwp/wp-content/uploads/20170130_193345-222x300.jpg" alt="An early look at the Blanket Boss app." width="222" height="300" /> An early look at the Blanket Boss app, with its original colour scheme.[/caption]
+
+Then I got this crazy idea of blanket statuses, a sort of tagging system so that each blanket could be marked with various conditions. The trouble was these might be graded, and would not be mutually exclusive—a blanket could be in good repair, in use, and need washing at the same time—but I didn't want to have separate inputs and controls for each. I tried explaining all of this to an instructor to get some help on solving this issue, but our discussions were not fruitful, and the problem lingered. Any free time I had available between completing other assignments, I dedicated to poring through the Rails guides and API. During this time, we covered data modelling and associations. At some point this new knowledge coincided with my search and I figured out how to solve this matter with a <span class="code-phrase">has_and_belongs_to_many</span> association, a join table, and <span class="code-phrase">collection_select</span>, among other things. I felt like a rock star.
+
+My next challenge was creating the ability to view custom lists, based on blanket attributes. I confused another instructor as I tried to explain what I wanted to achieve, and how I was approaching it. This feature remained bookmarked for quite some time, until I found t<a href="http://www.justinweiss.com/articles/search-and-filter-rails-models-without-bloating-your-controller/">his article</a> and learned about scoping. It took several rounds of error logs, head scratching, massaging code, and small victories before it finally worked as intended. Rock star.
+
+There are a world of features and extensions I have in mind for this app, some of which I've been able to implement following the end of the course, and some which remain on a to-do list. I'm happy to say that the app is at least usable at the moment, and now I have a complete inventory of my own mare's clothes: a modest wardrobe of 10 blankets and coolers. Yes, 10. For one horse. Wow.
+<h2><strong>Tools &amp; Tech</strong></h2>
+<ul class="tools-tech">
+ 	<li>Ruby on Rails</li>
+ 	<li>PostgreSQL</li>
+ 	<li>thoughtbot Bourbon suite</li>
+ 	<li>CarrierWave</li>
+ 	<li>AWS S3</li>
+ 	<li>jQuery</li>
+ 	<li>FontAwesome</li>
+ 	<li>animate.css</li>
+ 	<li>AJAX</li>
+ 	<li>Sumo Select</li>
+</ul>
+<h2>Lessons learned</h2>
+<ul>
+ 	<li>Communication is SO important in co-operative problem solving. It's great to get help from experienced coders and peers, but it can be challenging to explain and describe a problem and a desired resolution. Is it better to abstract the idea and get an vague, hypothetical solution that might be bent to fit your case, or does it help to really take someone down into the specifics of a situation for a particular user in an unfamiliar industry to get a tailored answer? I don't have the answer to that yet (unless "it depends" counts).</li>
+ 	<li>Experienced coders don't always have the answers you need, but if you persist and keep looking, a suitable solution can be found.</li>
+ 	<li>Design and development are two separate processes. I know this, and I always lose myself in the first. This time was no different. [I don't know if this counts as learning, but if not, it's one more strike to pound that notion home.]</li>
+ 	<li>Using thoughtbot's Neat (grid), Bourbon, Refills, &amp; Empties was interesting. Compared to previous work with Bootstrap and Foundation, it was nice to have something more lightweight and modular to work with. I still don't think I took full advantage of some of it, but that may be because much of Bourbon is marked as deprecated in anticipation of a new release, so there wasn't much left to dive into.</li>
+</ul>
+<h2>See it</h2>
+<a class="see-it" href="https://blanketboss.herokuapp.com/">Live site</a> <a class="see-it" href="https://github.com/svillegascreative/blanketboss">Source</a>
