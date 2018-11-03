@@ -1,0 +1,25 @@
+{
+	"layout": "default",
+
+	"site": {
+		"title": "sylvia villegas creative",
+		"url": "http://svillegas.com",
+		"description": "The personal site of sylvia villegas, web developer & creative problem solver",
+		"keywords": [
+			"web development",
+			"web developer",
+			"front-end development",
+			"front-end developer",
+			"horse clipping",
+			"horse grooming"
+		]
+	},
+
+	"author": {
+		"name": "sylvia villegas",
+		"email": "sylvia@svillegas.com",
+		"twitter": "https://twitter.com/svillegastweets",
+		"instagram": "https://www.instagram.com/zoophoria",
+		"github": "https://www.github.com/svillegascreative"
+	}
+}
