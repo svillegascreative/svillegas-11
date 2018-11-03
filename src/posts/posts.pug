@@ -1,6 +1,13 @@
 ---
-title: Blog
+title: Writing
 layout: default
+tags: []
 ---
 
-h1 Blog
+h1= title
+
+ul
+	each post in collections.post.reverse()
+		li
+			a(href=post.url) #{post.data.title}
+			div= post.date.toLocaleString("en-CA", { month: 'short', day: 'numeric', year: 'numeric'})
