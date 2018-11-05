@@ -5,11 +5,17 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="{{ meta.site.description }}">
-	<meta name="keywords" content="{{ meta.site.keywords }}">
+	<meta name="keywords" content="{{ meta.site.keywords | join(',') }}">
 	
-	<title>{{ page.title | meta.site.title }}</title>
-
 	<link rel="stylesheet" href="/css/styles.css">
+
+	<title>
+		{% if page.title %}
+			{{ page.title }}
+		{% else %}
+			{{ meta.site.title }}
+		{% endif %}
+	</title>
 </head>
 
 <body>
