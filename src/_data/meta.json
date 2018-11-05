@@ -6,13 +6,27 @@
 		"url": "http://svillegas.com",
 		"description": "The personal site of sylvia villegas, web developer & creative problem solver",
 		"keywords": [
-			"web development",
-			"web developer",
-			"front-end development",
-			"front-end developer",
-			"horse clipping",
-			"horse grooming"
+			"web development Toronto",
+			"web developer Toronto",
+			"front-end development Toronto",
+			"front-end developer Toronto",
+			"horse clipping Ontario",
+			"horse grooming Ontario"
 		]
+	},
+
+	"og": {
+		"title":"sylvia villegas creative",
+		"description": "The personal site of sylvia villegas, web developer & creative problem solver",
+		"image": "",
+		"url": "http://svillegas.com"
+	},
+
+	"twitter": {
+		"title": "sylvia villegas creative",
+		"description":"The personal site of sylvia villegas, web developer & creative problem solver",
+		"image":"",
+		"card": ""
 	},
 
 	"author": {
