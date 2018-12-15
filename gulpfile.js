@@ -54,7 +54,7 @@ gulp.task('images', (done) => {
 	done();
 });
 
-gulp.task('generate', shell.task('eleventy'));
+gulp.task('generate-dev', shell.task('ELEVENTY_ENV=development npx eleventy'));
 
 gulp.task('browserSync', (done) => {
   browserSync.init({
@@ -68,9 +68,9 @@ gulp.task('browserSync', (done) => {
 });
 
 gulp.task('watch', () => {
-	gulp.watch(paths.fileSrc, gulp.series('generate'));
+	gulp.watch(paths.fileSrc, gulp.series('generate-dev'));
 	gulp.watch(paths.styleSrc, gulp.series('styles'));
 	gulp.watch(paths.scriptSrc, gulp.series('scripts'));
 });
 
-gulp.task('default', gulp.series('generate', gulp.parallel('browserSync', 'watch')));
+gulp.task('dev', gulp.series('generate-dev', gulp.parallel('browserSync', 'watch')));
