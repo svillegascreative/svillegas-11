@@ -24,7 +24,7 @@ main {
 }
 
 @media (min-width: $large-up) {
-	main {
-		margin-right: $right-banner-width;
+	body {
+		padding-right: $right-banner-width;
 	}
 }
