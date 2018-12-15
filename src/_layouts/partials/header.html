@@ -5,36 +5,16 @@
 		</a>
 
 		<ul class="main-nav">
+			{%- for link in menu -%}
 			<li>
-				<a href="/web/" {% if page.url == "/web/" %}class="current-page"{% endif %}>
-					{% if page.url == "/web/" %}<span class="visually-hidden">Current page:</span>{% endif %}
-					Web
+				<a href="{{link.url}}" class="{% if page.url == link.url %}current-page{% endif %}">
+					{% if page.url == link.url %}
+						<span class="visually-hidden">Current page:</span>
+					{% endif %}
+					{{ link.name }}
 				</a>
 			</li>
-			<li>
-				<a href="/equine/" {% if page.url == "/equine/" %}class="current-page"{% endif %}>
-					{% if page.url == "/equine/" %}<span class="visually-hidden">Current page:</span>{% endif %}
-					Equine
-				</a>
-			</li>
-			<li>
-				<a href="/posts/" {% if page.url == "/posts/" %}class="current-page"{% endif %}>
-					{% if page.url == "/posts/" %}<span class="visually-hidden">Current page:</span>{% endif %}
-					Writing
-				</a>
-			</li>
-			<li>
-				<a href="/about/" {% if page.url == "/about/" %}class="current-page"{% endif %}>
-					{% if page.url == "/about/" %}<span class="visually-hidden">Current page:</span>{% endif %}
-					About
-				</a>
-			</li>
-			<li>
-				<a href="/contact/" {% if page.url == "/contact/" %}class="current-page"{% endif %}>
-					{% if page.url == "/contact/" %}<span class="visually-hidden">Current page:</span>{% endif %}
-					Contact
-				</a>
-			</li>
+			{%- endfor -%}
 		</ul>
 	</nav>
 

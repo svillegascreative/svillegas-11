@@ -1,0 +1,22 @@
+[
+	{
+		"name": "Web",
+		"url": "/web/"
+	},
+	{
+		"name": "Equine",
+		"url": "/equine/"
+	},
+	{
+		"name": "Writing",
+		"url": "/posts/"
+	},
+	{
+		"name": "About",
+		"url": "/about/"
+	},
+	{
+		"name": "Contact",
+		"url": "/contact/"
+	}
+]
