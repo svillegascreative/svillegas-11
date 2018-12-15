@@ -6,15 +6,18 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const shell = require('gulp-shell');
 const browserSync = require('browser-sync');
+const imagemin = require('gulp-imagemin');
 
 const paths = {
 	siteSrc: 'src/',
 	fileSrc:'src/**/*.*',
 	styleSrc: 'assets/scss/**/*.scss',
 	scriptSrc: 'assets/js/**/*.js',
+	imageSrc:'assets/images/**/*',
 	siteDest: 'site',
 	styleDest: 'site/css',
-	scriptDest: 'site/js'
+	scriptDest: 'site/js',
+	imageDest: 'site/img'
 };
 
 gulp.task('styles', () => {
@@ -42,6 +45,13 @@ gulp.task('scripts', () => {
 	.pipe(browserSync.reload({
 		stream: true
 	}));
+});
+
+gulp.task('images', (done) => {
+	gulp.src(paths.imageSrc)
+	.pipe(imagemin())
+	.pipe(gulp.dest(paths.imageDest));
+	done();
 });
 
 gulp.task('generate', shell.task('eleventy'));
