@@ -1,15 +1,40 @@
 <header class="site-banner" role="banner">
 	<nav class="site-nav">
 		<a href="/" class="home-link" title="Back to home">
-			<img src="img/sylvia-villegas-creative.png" alt="Home" class="site-logotype">
+			<img src="{{helpers.siteUrl}}/img/sylvia-villegas-creative.png" alt="Home" class="site-logotype">
 		</a>
 
 		<ul class="main-nav">
-			<li><a href="/web">Web</a></li>
-			<li><a href="/equine">Equine</a></li>
-			<li><a href="/posts">Writing</a></li>
-			<li><a href="/about">About</a></li>
-			<li><a href="/contact">Contact</a></li>
+			<li>
+				<a href="/web/" {% if page.url == "/web/" %}class="current-page"{% endif %}>
+					{% if page.url == "/web/" %}<span class="visually-hidden">Current page:</span>{% endif %}
+					Web
+				</a>
+			</li>
+			<li>
+				<a href="/equine/" {% if page.url == "/equine/" %}class="current-page"{% endif %}>
+					{% if page.url == "/equine/" %}<span class="visually-hidden">Current page:</span>{% endif %}
+					Equine
+				</a>
+			</li>
+			<li>
+				<a href="/posts/" {% if page.url == "/posts/" %}class="current-page"{% endif %}>
+					{% if page.url == "/posts/" %}<span class="visually-hidden">Current page:</span>{% endif %}
+					Writing
+				</a>
+			</li>
+			<li>
+				<a href="/about/" {% if page.url == "/about/" %}class="current-page"{% endif %}>
+					{% if page.url == "/about/" %}<span class="visually-hidden">Current page:</span>{% endif %}
+					About
+				</a>
+			</li>
+			<li>
+				<a href="/contact/" {% if page.url == "/contact/" %}class="current-page"{% endif %}>
+					{% if page.url == "/contact/" %}<span class="visually-hidden">Current page:</span>{% endif %}
+					Contact
+				</a>
+			</li>
 		</ul>
 	</nav>
 
