@@ -1,21 +1,69 @@
-.banner {
-	display: flex;
+.site-banner {
 	padding: $base-space;
 }
 
+.site-nav {
+	display: flex;
+	height: 100%;
+}
+
+.home-link {
+	position: relative;
+	max-width: 25vh;
+	writing-mode: horizontal-tb;
+	text-align: end;
+
+	&::after {
+		display: block;
+		content: '';
+		opacity: 0.5;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-image: url('/img/5-set-venn.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+.site-logotype {
+	position: relative;
+	top: 50%;
+	display: inline-block;
+	max-width: 100%;
+}
+
+.main-nav {
+	@include unstyled-list;
+	flex: 1;
+	text-align: right;
+
+	a {
+		color: #000;
+	}
+}
+
+
 
 @media (min-width: $large-up) {
-	.banner {
+	.site-banner {
 		width: $right-banner-width;
 		max-width: $right-banner-max-width;
 		position: fixed;
 		right: 0;
 		top: 0;
 		bottom: 0;
+	}
+	
+	.site-nav {
 		flex-direction: column-reverse;
 	}
 
-	.nameplate {
-		text-align: center;
+	.home-link {
+		display: block;
+		width: 100%;
 	}
 }
