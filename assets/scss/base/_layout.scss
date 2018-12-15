@@ -8,14 +8,19 @@ html,
 body {
 	margin: 0;
 	padding: 0;
+	height: 100%;
 }
 
 body {
+	display: flex;
+	flex-direction: column;
 	background-color: $body-bg;
+	overflow-y: scroll;
 }
 
 main {
 	padding: $base-space;
+	flex: 1 0 auto;
 }
 
 @media (min-width: $large-up) {
