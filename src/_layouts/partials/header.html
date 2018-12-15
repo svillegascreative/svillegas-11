@@ -7,10 +7,16 @@
 		<ul class="main-nav">
 			{%- for link in menu -%}
 			<li>
-				<a href="{{link.url}}" class="{% if page.url == link.url %}current-page{% endif %}">
+				<a href="
 					{% if page.url == link.url %}
-						<span class="visually-hidden">Current page:</span>
-					{% endif %}
+						#main
+					{% else %}
+						{{link.url}}
+					{% endif %}" 
+					class="
+					{% if page.url == link.url %}
+						current-page
+					{% endif %}">
 					{{ link.name }}
 				</a>
 			</li>
