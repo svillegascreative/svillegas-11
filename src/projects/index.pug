@@ -1,0 +1,14 @@
+---
+layout: default
+title: Projects
+tags: []
+---
+
+h1= title
+
+ul
+	each project in collections.project
+		li
+			h2= project.data.title
+			p= project.data.projectDate
+			p= project.data.description

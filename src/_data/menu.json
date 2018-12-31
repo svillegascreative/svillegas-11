@@ -1,14 +1,10 @@
 [
 	{
-		"name": "Web",
-		"url": "/web/"
+		"name": "Projects",
+		"url": "/projects/"
 	},
 	{
-		"name": "Equine",
-		"url": "/equine/"
-	},
-	{
-		"name": "Writing",
+		"name": "Writings",
 		"url": "/posts/"
 	},
 	{
