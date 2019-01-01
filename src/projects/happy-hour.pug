@@ -1,22 +1,43 @@
 ---
-
 title: Happy Hour
-
 projectDate: 02/2017
-
 type: web
-
 tech:
   - Javascript
   - jQuery
   - FontAwesome
-
 description: A fun and simple alcohol-themed game of Tic Tac Toe, made with JavaScript & jQuery.
-
 image: https://res.cloudinary.com/svillegas/image/upload/v1546303749/svillegas-com/happy-hour.png
-
 url: https://codepen.io/svillegas/full/KaYKWE
-
 repo: https://github.com/svillegascreative/tic-tac-toe
-
 ---
+
+
+p A fun and simple alcohol-themed game of Tic Tac Toe, made with JavaScript &amp; jQuery.
+
+h2 The Story
+p This was one of our individual daily assignments during a <a href="https://bitmaker.co">Bitmaker (GA Toronto)</a> Web Development Immersive course, following an introduction to jQuery and a lesson on JavaScript events, callbacks, and closures.
+
+p Since the requirements were pretty open-ended, this was our first chance to get creative with JavaScript on the front end, and that is indeed what I did. I knew right away that I wanted to use icons as player markers, so I turned to Font Awesome, since I'd used it before and could include it quickly. Looking for a fun pair of icons that worked together, I came up with the idea of pairing the beer mug and martini glass in a happy hour-themed game.
+
+h2 The Process
+p Knowing that the functionality of the game would be run by JavaScript (and thus would not require running a server), I decided to code and build the game directly on <a href="https://codepen.io">CodePen</a>. That was fun. Almost <em>too</em> fun.
+
+p Since I got so into the appearance and theme of the game—check out the background blur incrementing with each play! Get it?—I got carried away with the front-end code and neglected to have the game actually <em>end</em>. That is, it was possible to play back and forth, but the game would not stop to acknowledge a winner or declare a draw. Oh well, I figured the point was to practice JS &amp; jQuery, and I felt I'd done that, at least from a "front end" perspective.
+
+p And yet....
+
+p It nagged at me that the game never ended. I hadn't been able to work out a winning strategy, and when I looked over solutions developed by my classmates, I couldn't apply their approaches, due to the way I had engineered the game from the front end in. Finally, months later, I finally took the time to go back and work out a strategy to sort out completion of the game, so that it was fully and satisfyingly playable.
+
+h2 Tools &amp; Tech
+ul.tools-tech
+  each t in tech
+    li= t
+
+h2 Lessons Learned
+ul
+  li There are many ways to solve a problem, and there is a difference in the way that back-end thinkers and front-end thinkers approach a problem. It[s worth figuring out what your goals are and what your approach will be to know how you are going to solve something.
+
+h2 See it
+a(href="https://github.com/svillegascreative/tic-tac-toe").see-it Source
+a(href="https://codepen.io/svillegas/full/KaYKWE").see-it Play it

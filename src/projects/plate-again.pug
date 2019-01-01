@@ -1,11 +1,7 @@
 ---
-
 title: Plate Again
-
 projectDate: March 2017
-
 type: web
-
 tech:
   - Ruby on Rails
   - PostgreSQL
@@ -17,13 +13,44 @@ tech:
   - AWS S3
   - Google Maps
   - AddThis
-
 description: A concept app, as a final group project during a Web Development Immersive course at Bitmaker (GA Toronto), addressing commercial food waste in the city of Toronto.
-
 image: https://res.cloudinary.com/svillegas/image/upload/v1546303758/svillegas-com/plate-again.jpg
-
 url: http://plateagain.herokuapp.com
-
 repo: https://github.com/svillegascreative/PlateAgain
 
 ---
+
+p PlateAgain was a group project completed in the final 2 weeks of a web development immersive course at <a href="http://bitmaker.co">Bitmaker (GA Toronto)</a>, completed in March 2017. It is a fully responsive Ruby on Rails app addressing commercial food waste in the city of Toronto.
+
+
+h2 The Story
+p Commercial food waste is a huge problem in large cities, and is a multi-billion- dollar problem nationwide. With growing attention in the last few years, new apps and services are starting to appear to address this issue and reduce waste. With two of our group members having witnessed huge food waste while working in the food service industry, we felt that this was both a meaningful and scalable project that we could build as our final project.
+
+p Aimed at restaurants, caterers, event planners, etc. in the city of Toronto, PlateAgain would allow these "providers" of surplus food to create accounts and list available food items. Shelters, meal programs, etc. can create accounts as "accepters" to view and claim food items. Via PlateAgain, these two parties can view each other's locations, get directions, and communicate via in-app messaging to arrange transfer of the food items, and perhaps to develop ongoing relationships.
+
+h2 The Process
+p I took on the general role of project manager, though we used a shared Trello board to jointly formulate our user stories and the features we were implementing at each iteration, and to aid the team keep track of each other's tasks and progress. Though we tackled some challenges in pairs, as a fivesome we always had a floater working solo or in support of the others.
+
+p Our initial focus was to ensure functionality of the app and inclusion of the features we really wanted, so we all worked on building the back end and started with a very minimal UI through several early iterations. As the project advanced, I moved from building core back-end features to a more front-end heavy role, while still checking in with my teammates to assist with the back end code and to build in UI elements or improve overall structure and UX.
+
+p Somehow we got away with skipping the design and wireframing we were supposed to do for instructor approval at the onset of the project (!), though we did have a brief chat with a knowledgeable <a href="http://zaidrasid.com">UX design</a> student for some guidance. This approach was perhaps against convention, but I felt that it allowed us to focus on usable, semantic structure and build the UI incrementally through progressive enhancement, <em>layering on</em> the CSS and Javascript, rather than thinking of fallback design for when those resources fail or are disabled.
+
+p I chose to try Zurb's Foundation framework to structure and build the app, since I was familiar with Twitter's Bootstrap already (from <a href="http://localhost/svwp/portfolio/barn-genius/">Barn Genius!</a>), and felt that it was sometimes too opinionated in its design; anyone who uses Bootstrap knows that although it's quick and easy to use, that's only the case if you want your work to scream "Bootstrap".
+
+p In the end it was really fun to work on a simple idea that we were all excited about, and we got a lot of interest when we presented it during our showcase. The problem of food waste is one that is getting an increasing amount of attention in recent years and is not going to go away on its own, and it was very rewarding to conceive and build a tool (even just a demo) as a possible part of the solution.
+
+h2 Tools &amp; Tech
+ul.tools-tech
+  each t in tech
+    li= t
+
+h2 Lessons Learned
+ul
+  li It can be tricky to develop demo apps with APIs that require real data. We had to use real Toronto business in this app in order to implement Google maps, so we had to replace all of our original seed data. We also had in mind to use an API that verified business registration number to ensure that the app was used only by legitimate establishments. While this would have been a selling feature in a production app, it was impossible (or at least not worthwhile) to build into a demo.
+  li I like GUIs. It was very helpful to myself and my teammates to be able to visualize the work that we'd all done, the branches we'd created and the commits we'd made by using <a href="https://www.gitkraken.com/">GitKraken</a>.
+  li Any front end framework is going to be opinionated to some degree. Although Foundation seemed less intrusive than Bootstrap, I found that in the end I still customized a lot of what I put in, and didn't use as much as was available. Though it was less of a fight than with Bootstrap, it still defeats the purpose of using a framework if you're going to keep altering it, and it's unnecessary to load all of that code into your project if you're not making the most of it.
+  li Lots of teamwork stuff. You always learn more of it every time.
+
+h2 See it
+a(href="http://plateagain.herokuapp.com/").see-it Live site
+a(href="https://github.com/svillegascreative/PlateAgain").see-it Source
