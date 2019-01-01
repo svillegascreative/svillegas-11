@@ -6,11 +6,16 @@ tags: []
 
 h1= title
 
-ul
+ul.projects-list
 	each project in collections.project
 		li
-			h2= project.data.title
-			p= project.data.projectDate
-			p= project.data.description
 			picture
-				img(src=project.data.image)
+				img(src=project.data.image alt="" role="presentation")
+			div
+				h2= project.data.title
+				p= project.data.description
+				span.project-date= project.data.projectDate
+				if project.data.url
+					a(href=project.data.url) See it
+				if project.data.repo
+					a(href=project.data.repo) Source
