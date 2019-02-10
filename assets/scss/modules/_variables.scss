@@ -8,6 +8,7 @@ $large-up: $large + 1em;
 
 
 ///// PALETTE
+$dark-teal: hsl(192,100%,24%);
 $code-bgcolor: #777;
 $code-color: #ccc;
 
@@ -22,13 +23,13 @@ $basefont-line-height: 1.5;
 
 $headingfont-family: 'Quando', serif;
 
-$a-color: hsl(190, 70%, 45%);
+$a-color: $dark-teal;
 
 $code-padding: 5px;
 
 
 ///// LAYOUT
-$body-bg: hsl(190, 5%, 87%);
+$body-bg: hsl(220, 10%, 85%);
 
 $base-space: 1rem;
 

@@ -43,6 +43,7 @@
 
 	a {
 		color: #000;
+		white-space: nowrap;
 	}
 }
 
@@ -69,5 +70,6 @@
 	.home-link {
 		display: block;
 		width: 100%;
+		margin: 0 auto;
 	}
 }

@@ -1,16 +1,21 @@
+// vendor files
 @import 'vendor/sanitize';
 
-@import 'base/variables';
-@import 'base/mixins';
+// modules (not code producing)
+@import 'modules/variables';
+@import 'modules/mixins';
+@import 'modules/functions';
 
+// base or global styles
 @import 'base/accessibility';
-
 @import 'base/layout';
 @import 'base/elements';
 @import 'base/typography';
 @import 'base/forms';
 
-@import 'component/banner';
-@import 'component/footer';
+// components
+@import 'components/banner';
+@import 'components/footer';
 
-@import 'page/projects';
+// pages
+@import 'pages/projects';
