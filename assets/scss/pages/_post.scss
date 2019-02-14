@@ -1,0 +1,23 @@
+@media screen and (min-width: $large-up) {
+	.feature-photo {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: -1;
+		
+		&::after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			content: '';
+			background: radial-gradient(145% 75% at -28% 35%, transparent 75%, $body-bg 90%);
+		}
+	}
+}
+
+#post {
+	margin-top: 600px;
+}
