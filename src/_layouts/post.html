@@ -1,7 +1,18 @@
 ---
-layout: default
+layout: wrapper
 ---
 
-<span>{{page.date}}</span>
+{% include partials/header.html %}
 
-{{ content }}
+<main>
+	<div class="feature-photo">
+		<img src="{{ photo_url }}">
+	</div>
+
+	<article id="post">
+		{{content}}
+	</article>
+
+</main>
+
+{% include partials/footer.html %}
