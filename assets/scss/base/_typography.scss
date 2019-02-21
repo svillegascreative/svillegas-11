@@ -1,21 +1,33 @@
 html {
 	font-family: $basefont-family;
-	font-size: $basefont-size;
-	line-height: $basefont-line-height;
+	font-size: var(--font-size);
+	line-height: var(--line-height);
 	-webkit-text-size-adjust: 100%;  // normalize.css v8.0.0
 }
 
 p {
 	min-width: 30ch;
-	max-width: 75ch;
+	max-width: 70ch;
 }
 
 
 //// LINKS
 a {
-	color: $a-color;
+	color: var(--link-color);
 	text-decoration: none;
 	background-color: transparent; // normalize.css v8.0.0
+}
+
+p > a {
+	border-bottom: 2px solid;
+	transition: all 0.5s ease;
+
+	&:hover,
+	&:active {
+		background-color: $grey-light-3;
+		transition: all 0.5s ease;
+		color: var(--link-hover-color);
+	}
 }
 
 
@@ -41,6 +53,11 @@ strong {
   font-weight: bolder; // normalize.css v8.0.0
 }
 
+strong {
+	font-size: 1.2em;
+	vertical-align: middle;
+}
+
 small {
   font-size: 80%; // normalize.css v8.0.0
 }
@@ -58,11 +75,18 @@ pre {
 	/* Linux/OpenOffice fallback */ Liberation Mono,
 	/* fallback */ monospace;
 	
-	font-size: 1em; // normalize.css v8.0.0
+	font-size: 1em;
 	color: $code-color;
 	background-color: $code-bgcolor;
-	padding: $code-padding;
+	padding: $ms-dn-5 $ms-dn-4;
 	border-radius: 3px;
+}
+
+kbd {
+	color: #111;
+	background: #aaa;
+	box-shadow: 1px 1px 2px #666;
+	border: 1px solid #666;
 }
 
 sub,
@@ -87,6 +111,11 @@ abbr[title] {
   text-decoration: underline dotted; // normalize.css v8.0.0
 }
 
+mark {
+	background-color: $highlight;
+	padding: 2px 5px;
+}
+
 
 //// LISTS
 
@@ -101,12 +130,34 @@ ol ol {
 
 //// QUOTES
 blockquote {
-	color: $color-accent;
-	padding: $small-space;
+	position: relative;
+	color: $indigo-dark-2;
+	padding: $ms-dn-1;
 	font-style: italic;
-	text-align: center;
+
+	&::before,
+	&::after {
+		position: absolute;
+		font-family: $headingfont-family;
+		font-size: 10em;
+		font-weight: bold;
+		line-height: 1em;
+		opacity: 0.4;
+		color: $indigo-light-2;
+		z-index: -1;
+	}
+	&::before {
+		content: '\201C';
+		left: -0.4em;
+	}
+	&::after {
+		content: '\201D';
+		right: -0.2em;
+		bottom: -0.5em;
+	}
 
 	cite {
+		display: block;
 		text-align: right;
 	}
 }

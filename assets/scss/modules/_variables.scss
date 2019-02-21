@@ -1,27 +1,74 @@
-:root {
-	--bgcolor: hsl(222, 11%, 83%);
-	--urlcolor: hsl(192,100%,24%);
-}
+// STATIC (SASS) VARIABLES 
+// -----------------------------------------------------------------
+
+// BREAKPOINTS
+$bp-tiny-max: 200px;
+$bp-small-min: $bp-tiny-max + 1px;
+
+$bp-small-max: 500px;
+$bp-med-min: $bp-small-max + 1px;
+
+$bp-med-max: 800px;
+$bp-large-min: $bp-med-max + 1px;
+
+$bp-large-max: 1000px;
+$bp-huge-min: $bp-large-max + 1px;
 
 
-///// BREAKPOINTS
-$small: 30em;
-$small-up: $small + 1em;
-$medium: 45em;
-$medium-up: $medium + 1em;
-$large: 60em;
-$large-up: $large + 1em;
+// MODULAR SCALE
+$ms-base: 1em;
+$ms-ratio: 1.33;
+
+$ms-up-1: $ms-base * $ms-ratio;
+$ms-up-2: $ms-up-1 * $ms-ratio;
+$ms-up-3: $ms-up-2 * $ms-ratio;
+$ms-up-4: $ms-up-3 * $ms-ratio;
+$ms-up-5: $ms-up-4 * $ms-ratio;
+
+$ms-dn-1: $ms-base / $ms-ratio;
+$ms-dn-2: $ms-dn-1 / $ms-ratio;
+$ms-dn-3: $ms-dn-2 / $ms-ratio;
+$ms-dn-4: $ms-dn-3 / $ms-ratio;
+$ms-dn-5: $ms-dn-4 / $ms-ratio;
 
 
-///// PALETTE
-$dark-teal: hsl(192,100%,24%);
-$code-bgcolor: #777;
-$code-color: #ccc;
 
-$color-accent: indigo;
+// PALETTE
+
+$teal-dark-3: #04232B;
+$teal-dark-2: #0E3640;
+$teal-dark-1: #1F5361;
+$teal-base: #397382;
+$teal-light-1: #5B97A7;
+$teal-light-2: #8AC1D1;
+$teal-light-3: #C5F2FF;
+$indigo-dark-3: #08052E;
+$indigo-dark-2: #130E42;
+$indigo-dark-1: #271E61;
+$indigo-base: #423681;
+$indigo-light-1: #6758A8;
+$indigo-light-2: #9281CE;
+$indigo-light-3: #CBBAFF;
+$violet-dark-3: #14011C;
+$violet-dark-2: #280932;
+$violet-dark-1: #401648;
+$violet-base: #5C2B61;
+$violet-light-1: #8E528F;
+$violet-light-2: #C288BF;
+$violet-light-3: #F7CEF2;
+$grey-dark-4: #17181B;
+$grey-dark-3: #1D1F22;
+$grey-dark-2: #2B2D32;
+$grey-dark-1: #404147;
+$grey-base: #5D5E67;
+$grey-light-1: #7E7F88;
+$grey-light-2: #A7A6B0;
+$grey-light-3: #CECED6;
+$grey-light-4: #F4F3F8;
+$grey-light-5: lighten($grey-light-4, 50%);
 
 
-///// TYPOGRAPHY
+// TYPOGRAPHY
 @font-face {
 	font-family: 'Latina Essential Light';
 	src: url('../fonts/LatinaEssential-Light.eot') format('embedded-opentype'),
@@ -29,6 +76,15 @@ $color-accent: indigo;
 			 url('../fonts/LatinaEssential-Light.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Latina Essential Light';
+	src: url('../fonts/LatinaEssential-LightIt.eot') format('embedded-opentype'),
+			 url('../fonts/LatinaEssential-LightIt.woff2') format('woff2'),
+			 url('../fonts/LatinaEssential-LightIt.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
 }
 
 @font-face {
@@ -40,25 +96,32 @@ $color-accent: indigo;
 }
 
 $basefont-family: 'Latina Essential Light', sans-serif;
-$basefont-size: 120%;
-$basefont-line-height: 1.5;
-
 $headingfont-family: 'Quando', serif;
 
-$a-color: var(--urlcolor);
+$highlight: $teal-light-3;
 
-$code-padding: 5px;
+$code-bgcolor: $teal-dark-3;
+$code-color: $teal-light-2;
 
 
 ///// LAYOUT
-$body-bg: var(--bgcolor);
-
-$base-space: 1rem;
+$body-bgcolor: $grey-light-4;
 
 $right-banner-width: 30%;
 $right-banner-max-width: 30em;
 
 
-// SPACING
-$base-space: 1em;
-$small-space: $base-space / 2;
+
+// DYNAMIC (CSS) VARIABLES 
+// -----------------------------------------------------------------
+:root {
+	// colors
+	--bgcolor: #{$body-bgcolor};
+	--urlcolor: hsl(192,100%,25%);
+
+	// typography
+	--font-size: 120%;
+	--line-height: 1.5;
+	--link-color: #{$teal-base};
+	--link-hover-color: #{$teal-dark-2};
+}

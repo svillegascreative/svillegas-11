@@ -14,16 +14,16 @@ body {
 body {
 	display: flex;
 	flex-direction: column;
-	background-color: $body-bg;
+	background-color: var(--bgcolor);
 	overflow-y: scroll;
 }
 
 main {
-	padding: $base-space;
+	padding: $ms-base;
 	flex: 1 0 auto;
 }
 
-@media (min-width: $large-up) {
+@media (min-width: $bp-large-min) {
 	main {
 		margin-right: $right-banner-width;
 	}

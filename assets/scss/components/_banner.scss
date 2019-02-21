@@ -1,5 +1,5 @@
 .site-banner {
-	padding: $base-space;
+	padding: $ms-base;
 }
 
 .site-nav {
@@ -53,7 +53,7 @@
 
 
 
-@media (min-width: $large-up) {
+@media (min-width: $bp-large-min) {
 	.site-banner {
 		width: $right-banner-width;
 		max-width: $right-banner-max-width;

@@ -1,0 +1,89 @@
+fieldset {
+	border-width: 0.5em 0 0 0;
+	border-radius: 3em 0 0 0;
+	border-style: solid;
+	border-color: $teal-base;
+	padding-left: 2em;
+}
+
+legend {
+	padding: 0 0.5em;
+	color: $teal-base;
+	font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="url"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="datetime"],
+textarea {
+	background: $grey-light-4;
+	border-color: $grey-light-2;
+	padding: 0 5px;
+	transition: all 0.5s ease;
+	
+	&:focus {
+		outline: none;
+		border-bottom: 2px solid $teal-base;
+		background: $grey-light-5;
+		transition: all 0.5s ease;
+	}
+
+	&::placeholder {
+		color: $grey-base;
+	}
+}
+
+input[type="text"],
+input[type="password"],
+input[type="url"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="datetime"] {
+	border-width: 0 0 2px 0;
+}
+
+input[type="number"] {
+	padding-right: 0;
+}
+
+textarea {
+	border-width: 2px;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+	background-color: $teal-base;
+	color: $grey-light-5;
+	border-radius: 3px;
+	transition: all 0.5s ease;
+	border: none;
+	padding: $ms-dn-4 $ms-dn-3;
+	margin: $ms-dn-4;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $teal-dark-1;
+		transition: all 0.5s ease;
+	}
+}
+
+button[disabled],
+input[disabled] {
+	background-color: $teal-light-2;
+}
