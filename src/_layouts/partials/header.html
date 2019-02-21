@@ -1,7 +1,7 @@
 <header class="site-banner" role="banner">
 	<nav class="site-nav">
 		<a href="/" class="home-link" title="Back to home">
-			<img src="{{helpers.siteUrl}}/img/sylvia-villegas-creative.png" alt="Home" class="site-logotype">
+			<img src="{{helpers.siteUrl}}/img/sylvia-villegas-creative.png" title="Home Page" class="site-logotype">
 		</a>
 
 		<ul class="main-nav">
@@ -16,7 +16,8 @@
 					class="
 					{% if page.url == link.url %}
 						current-page
-					{% endif %}">
+					{% endif %}"
+					title="{{link.title}}">
 					{{ link.name }}
 				</a>
 			</li>

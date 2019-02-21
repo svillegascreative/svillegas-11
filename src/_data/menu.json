@@ -1,18 +1,22 @@
 [
 	{
 		"name": "Projects",
-		"url": "/projects/"
+		"url": "/projects/",
+		"title": "See some of my projects"
 	},
 	{
 		"name": "Writings",
-		"url": "/posts/"
+		"url": "/posts/",
+		"title": "Things I think and write about"
 	},
 	{
 		"name": "About",
-		"url": "/about/"
+		"url": "/about/",
+		"title": "Learn something about me"
 	},
 	{
 		"name": "Contact",
-		"url": "/contact/"
+		"url": "/contact/",
+		"title": "Get in touch with me"
 	}
 ]
