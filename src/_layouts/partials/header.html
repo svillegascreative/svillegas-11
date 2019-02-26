@@ -1,23 +1,21 @@
 <header class="site-banner" role="banner">
-	<nav class="site-nav">
-		<a href="/" class="home-link" title="Back to home">
-			<img src="{{helpers.siteUrl}}/img/sylvia-villegas-creative.png" title="Home Page" class="site-logotype">
-		</a>
 
-		<ul class="main-nav">
+	<div class="logo-wrapper">
+		<img src="{{helpers.siteUrl}}/img/5-set-venn.svg" alt="" class="site-logo">
+		<a href="/" class="home-link">
+			<img src="{{helpers.siteUrl}}/img/sylvia-villegas-creative.png" title="Go to Home Page" class="site-logotype">
+		</a>
+	</div>
+	
+	<nav class="site-nav" aria-label="Main Menu">
+		<ul class="main-nav-list">
 			{%- for link in menu -%}
 			<li>
-				<a href="
-					{% if page.url == link.url %}
-						#main
-					{% else %}
-						{{link.url}}
-					{% endif %}" 
-					class="
-					{% if page.url == link.url %}
-						current-page
-					{% endif %}"
-					title="{{link.title}}">
+				{% if page.url == link.url %}
+					<a href="#main" class="current-page" aria-current="page" title="{{link.title}}">
+				{% else %}
+					<a href="{{link.url}}" title="{{link.title}}">
+				{% endif %}
 					{{ link.name }}
 				</a>
 			</li>
