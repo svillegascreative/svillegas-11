@@ -4,18 +4,20 @@
 	box-sizing: border-box;
 }
 
-html,
-body {
+html {
 	margin: 0;
 	padding: 0;
 	height: 100%;
 }
 
 body {
+	margin: 0;
+	padding: 0;
 	display: flex;
 	flex-direction: column;
 	background-color: var(--bgcolor);
 	overflow-y: scroll;
+	min-height: 100%;
 }
 
 main {
