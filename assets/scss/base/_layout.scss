@@ -1,3 +1,31 @@
+// ----- variables
+body {
+	--body-left-edge: #{$ms-dn-3};
+
+	@media (min-width: $bp-small-min) {
+		--body-left-edge: #{$ms-dn-2};
+	}
+}
+
+.main {
+	--margin-right: auto;
+	--padding: #{$ms-base};
+
+	@media (min-width: $bp-med-min) {
+		--padding: #{$ms-up-1} #{$ms-up-2}
+	}
+	
+	@media (min-width: $bp-large-min) {
+		--margin-right: #{$right-banner-width};
+		--padding: #{$ms-up-2} #{$ms-up-4};
+	}
+
+}
+
+
+// ----- styles
+
+
 *,
 *:before,
 *:after {
@@ -13,7 +41,7 @@ html {
 body {
 	position: relative;
 	margin: 0;
-	padding: 0 0 0 $ms-dn-2;
+	padding: 0 0 0 var(--body-left-edge);
 	display: flex;
 	flex-direction: column;
 	background-color: var(--bgcolor);
@@ -27,18 +55,14 @@ body {
 		top: 0;
 		bottom: 0;
 		left: 0;
-		width: $ms-dn-2;
+		width: var(--body-left-edge);
 		background: linear-gradient(to bottom, $teal-base, $indigo-base, $violet-base)
 	}
 }
 
-main {
-	padding: $ms-base;
+.main {
+	padding: var(--padding);
 	flex: 1 0 auto;
-}
-
-@media (min-width: $bp-large-min) {
-	main {
-		margin-right: $right-banner-width;
-	}
+	max-width: 70ch;
+	margin-right: var(--margin-right);
 }

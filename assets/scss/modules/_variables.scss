@@ -2,7 +2,7 @@
 // -----------------------------------------------------------------
 
 // BREAKPOINTS
-$bp-tiny-max: 200px;
+$bp-tiny-max: 350px;
 $bp-small-min: $bp-tiny-max + 1px;
 
 $bp-small-max: 500px;
@@ -11,7 +11,7 @@ $bp-med-min: $bp-small-max + 1px;
 $bp-med-max: 800px;
 $bp-large-min: $bp-med-max + 1px;
 
-$bp-large-max: 1000px;
+$bp-large-max: 1200px;
 $bp-huge-min: $bp-large-max + 1px;
 
 
@@ -120,11 +120,18 @@ $right-banner-max-width: 30em;
 :root {
 	// colors
 	--bgcolor: #{$body-bgcolor};
-	--urlcolor: hsl(192,100%,25%);
 
 	// typography
-	--font-size: 120%;
+	--font-size: 100%;
 	--line-height: 1.5;
 	--link-color: #{$teal-base};
 	--link-hover-color: #{$teal-dark-2};
+
+	@media (min-width: $bp-tiny-max) {
+		--font-size: 110%;
+	}
+
+	@media (min-width: $bp-small-max) {
+		--font-size: 120%;
+	}
 }
