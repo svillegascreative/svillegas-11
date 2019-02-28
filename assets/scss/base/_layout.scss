@@ -7,7 +7,7 @@ body {
 	}
 }
 
-.main {
+main {
 	--margin-right: auto;
 	--padding: #{$ms-base};
 
@@ -60,7 +60,7 @@ body {
 	}
 }
 
-.main {
+main {
 	padding: var(--padding);
 	flex: 1 0 auto;
 	max-width: 70ch;
