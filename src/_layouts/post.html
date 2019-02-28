@@ -1,18 +1,11 @@
 ---
-layout: wrapper
+layout: default
 ---
 
-{% include partials/header.html %}
+<div class="feature-photo">
+	<img src="{{ photo_url }}">
+</div>
 
-<main>
-	<div class="feature-photo">
-		<img src="{{ photo_url }}">
-	</div>
-
-	<article id="post">
-		{{content}}
-	</article>
-
-</main>
-
-{% include partials/footer.html %}
+<article id="post">
+	{{content}}
+</article>
