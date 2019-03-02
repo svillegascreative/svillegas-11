@@ -11,11 +11,11 @@
 		<ul class="main-nav-list">
 			{%- for link in menu -%}
 			<li>
-				{% if page.url == link.url %}
+				{%- if page.url == link.url -%}
 					<a href="#main" class="current-page" aria-current="page" title="{{link.title}}">
-				{% else %}
+				{%- else -%}
 					<a href="{{link.url}}" title="{{link.title}}">
-				{% endif %}
+				{%- endif -%}
 					{{ link.name }}
 				</a>
 			</li>
