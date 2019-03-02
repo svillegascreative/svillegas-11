@@ -1,0 +1,28 @@
+---
+layout: default
+title: Projects
+tags: []
+---
+
+<h1>{{title}}</h1>
+
+<ul class="projects-list">
+	{%- for project in collections.project reversed -%}
+		<li>
+			<picture>
+				<img src="{{project.data.image}}" alt="">
+			</picture>
+			<article>
+				<h2>{{project.data.title}}</h2>
+				<p>{{project.data.description}}</p>
+				<span class="project-date">{{project.data.projectDate}}</span>
+				{%- if project.data.url -%}
+					<a href="{{project.data.url}}">See it</a>
+				{%- endif -%}
+				{%- if project.data.repo -%}
+					<a href="{{project.data.repo}}">Source</a>
+				{%- endif -%}
+			</article>
+		</li>
+	{%- endfor -%}
+</ul>
