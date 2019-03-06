@@ -2,9 +2,8 @@ html {
 	font-family: $basefont-family;
 	font-size: var(--font-size);
 	line-height: var(--line-height);
-	-webkit-text-size-adjust: 100%;  // normalize.css v8.0.0
+	-webkit-text-size-adjust: 100%; // normalize.css v8.0.0
 }
-
 
 //// LINKS
 a {
@@ -25,6 +24,12 @@ p > a {
 	}
 }
 
+.cta-link {
+	padding: $ms-dn-4 $ms-dn-2;
+	font-weight: bold;
+	text-transform: uppercase;
+	border: 2px solid var(--link-color);
+}
 
 //// HEADINGS
 
@@ -37,15 +42,14 @@ h4 {
 
 h1 {
 	font-size: 2em; // normalize.css v8.0.0
-  margin: 0.67em 0; // normalize.css v8.0.0
+	margin: 0.67em 0; // normalize.css v8.0.0
 }
-
 
 //// VARIANTS
 
 b,
 strong {
-  font-weight: bolder; // normalize.css v8.0.0
+	font-weight: bolder; // normalize.css v8.0.0
 }
 
 strong {
@@ -54,7 +58,7 @@ strong {
 }
 
 small {
-  font-size: 80%; // normalize.css v8.0.0
+	font-size: 80%; // normalize.css v8.0.0
 }
 
 code,
@@ -63,13 +67,10 @@ samp,
 pre {
 	font-family: // sanitize.css v7.0.3
 	/* macOS 10.10+ */ Menlo,
-	/* Windows 6+ */ Consolas,
-	/* Android 4+ */ Roboto Mono,
-	/* Ubuntu 10.10+ */ Ubuntu Monospace,
-	/* KDE Plasma 4+ */ Oxygen Mono,
-	/* Linux/OpenOffice fallback */ Liberation Mono,
-	/* fallback */ monospace;
-	
+		/* Windows 6+ */ Consolas, /* Android 4+ */ Roboto Mono,
+		/* Ubuntu 10.10+ */ Ubuntu Monospace, /* KDE Plasma 4+ */ Oxygen Mono,
+		/* Linux/OpenOffice fallback */ Liberation Mono, /* fallback */ monospace;
+
 	font-size: 1em;
 	color: $code-color;
 	background-color: $code-bgcolor;
@@ -86,31 +87,29 @@ kbd {
 
 sub,
 sup {
-  font-size: 75%; // normalize.css v8.0.0
-  line-height: 0; // normalize.css v8.0.0
-  position: relative; // normalize.css v8.0.0
-  vertical-align: baseline; // normalize.css v8.0.0
+	font-size: 75%; // normalize.css v8.0.0
+	line-height: 0; // normalize.css v8.0.0
+	position: relative; // normalize.css v8.0.0
+	vertical-align: baseline; // normalize.css v8.0.0
 }
 
 sub {
-  bottom: -0.25em; // normalize.css v8.0.0
+	bottom: -0.25em; // normalize.css v8.0.0
 }
 
 sup {
-  top: -0.5em; // normalize.css v8.0.0
+	top: -0.5em; // normalize.css v8.0.0
 }
 
 abbr[title] {
-  border-bottom: none; // normalize.css v8.0.0
-  text-decoration: underline; // normalize.css v8.0.0
-  text-decoration: underline dotted; // normalize.css v8.0.0
+	border-bottom: 2px dotted $indigo-light-2;
+	text-decoration: none;
 }
 
 mark {
 	background-color: $highlight;
 	padding: 2px 5px;
 }
-
 
 //// LISTS
 
@@ -121,7 +120,6 @@ dt {
 ol ol {
 	list-style: lower-alpha;
 }
-
 
 //// QUOTES
 blockquote {
@@ -142,11 +140,11 @@ blockquote {
 		z-index: -1;
 	}
 	&::before {
-		content: '\201C';
+		content: "\201C";
 		left: -0.4em;
 	}
 	&::after {
-		content: '\201D';
+		content: "\201D";
 		right: -0.2em;
 		bottom: -0.5em;
 	}
