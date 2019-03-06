@@ -12,19 +12,16 @@ main {
 	--padding: #{$ms-base};
 
 	@media (min-width: $bp-med-min) {
-		--padding: #{$ms-up-1} #{$ms-up-2}
+		--padding: #{$ms-up-1} #{$ms-up-2};
 	}
-	
+
 	@media (min-width: $bp-large-min) {
 		--margin-right: #{$right-banner-width};
 		--padding: #{$ms-up-2} #{$ms-up-4};
 	}
-
 }
 
-
 // ----- styles
-
 
 *,
 *:before,
@@ -36,6 +33,7 @@ html {
 	margin: 0;
 	padding: 0;
 	height: 100%;
+	overflow-x: hidden;
 }
 
 body {
@@ -45,18 +43,24 @@ body {
 	display: flex;
 	flex-direction: column;
 	background-color: var(--bgcolor);
-	overflow-y: scroll;
+	// overflow-y: scroll;
+	overflow-x: hidden;
 	min-height: 100%;
 
 	&::before {
 		display: block;
 		position: absolute;
-		content: '';
+		content: "";
 		top: 0;
 		bottom: 0;
 		left: 0;
 		width: var(--body-left-edge);
-		background: linear-gradient(to bottom, $teal-base, $indigo-base, $violet-base)
+		background: linear-gradient(
+			to bottom,
+			$teal-base,
+			$indigo-base,
+			$violet-base
+		);
 	}
 }
 
@@ -65,4 +69,38 @@ main {
 	flex: 1 0 auto;
 	max-width: 70ch;
 	margin-right: var(--margin-right);
+}
+
+.page-header {
+	position: relative;
+
+	&::after {
+		position: absolute;
+		content: "";
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: -3em;
+		z-index: -1;
+		background: linear-gradient($teal-light-2, transparent);
+		height: 150%;
+		width: 129%;
+		opacity: 0.2;
+		border-radius: 50%;
+		display: block;
+		transform: rotate(-11deg);
+	}
+
+	h1 {
+		color: $teal-light-1;
+		text-shadow: 2px 2px 2px $teal-dark-1;
+		font-size: $ms-up-4;
+		margin: 0;
+	}
+
+	p {
+		font-size: 1.2em;
+		color: $grey-base;
+		font-weight: bold;
+	}
 }
