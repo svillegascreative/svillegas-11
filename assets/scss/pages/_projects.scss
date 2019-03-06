@@ -1,18 +1,42 @@
 .projects-list {
 	@include unstyled-list;
 
-	li {
-		margin-bottom: 8em;
-		padding: 1em;
-	}
-
 	a {
 		white-space: nowrap;
-		margin: 0 1em;
+		margin-right: $ms-base;
+	}
+}
+
+.project-stub {
+	padding: $ms-base;
+	margin-top: 3 * $ms-up-4;
+
+	img {
+		max-height: 20em;
+		margin: 0 auto;
+	}
+
+	h2 {
+		display: inline-block;
+		margin-bottom: 0;
+	}
+
+	.tech {
+		@include unstyled-list;
+		display: inline;
+		font-variant: all-small-caps;
+
+		li {
+			display: inline-block;
+			white-space: nowrap;
+			margin-right: $ms-dn-3;
+		}
 	}
 }
 
 .project-date {
-	font-variant: all-small-caps;
-	white-space: nowrap;
+	color: $grey-dark-1;
+}
+
+.project-stub-footer {
 }

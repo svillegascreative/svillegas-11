@@ -4,7 +4,7 @@ title: Projects
 tags: []
 ---
 
-<header>
+<header class="page-header">
 	<h1>{{ title }}</h1>
 	<p>
 		A few personal and paid web development projects completed over the past
@@ -16,19 +16,41 @@ tags: []
 
 <ul class="projects-list">
 	{%- for project in collections.project reversed -%}
-	<li>
+	<li class="project-stub">
+		{%- if project.data.image -%}
 		<picture>
-			<img src="{{ project.data.image }}" alt="" />
+			<img
+				src="{{ project.data.image }}"
+				alt="Screenshots of {{ project.data.title }}"
+			/>
 		</picture>
+		{%- endif -%}
+
 		<article>
 			<h2>{{ project.data.title }}</h2>
-			<p>{{ project.data.description }}</p>
 			<span class="project-date">{{ project.data.projectDate }}</span>
-			{%- if project.data.url -%}
-			<a href="{{ project.data.url }}" class="cta-link">See it</a>
-			{%- endif -%} {%- if project.data.repo -%}
-			<a href="{{ project.data.repo }}" class="cta-link">Source</a>
-			{%- endif -%}
+			<p>{{ project.data.description }}
+				<ul class="tech">
+					{%- for t in project.data.tech -%}
+					<li>{{ t }}</li>
+					{%- endfor -%}
+				</ul>
+			</p>
+
+			<footer class="project-stub-footer">
+				{%- if project.data.url -%}
+				<a href="{{ project.data.url }}" class="cta-link" title="See it live"
+					>See it</a
+				>
+				{%- endif -%} {%- if project.data.repo -%}
+				<a
+					href="{{ project.data.repo }}"
+					class="cta-link"
+					title="View the source code"
+					>Source</a
+				>
+				{%- endif -%}
+			</footer>
 		</article>
 	</li>
 	{%- endfor -%}
